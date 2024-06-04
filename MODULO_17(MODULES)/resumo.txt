@@ -1,0 +1,9 @@
+°Export default - única exportação como padrão.
+
+°No Import, o default seria justamente nomear qualquer nome do export default vindo de outro modulo que tenha esse export default.
+
+°Export e import nomeados é aqueles que tem { } 
+
+°Para mudar o nome. ex: import { panela as frigideira }
+
+(ex00 é o mesmo do ex01; só muda a forma de importar)

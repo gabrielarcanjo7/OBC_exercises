@@ -1,0 +1,88 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+dist/
+build/
+
+# Environment
+.env
+
+# Editor
+.vscode/
+.idea/
+
+# Logs and debugging
+logs/
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Operating Systems
+.DS_Store
+Thumbs.db
+
+# Package lock files
+package-lock.json
+yarn.lock
+
+# IDE files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Misc
+*.tmp
+*.bak
+*.cache
+*.db
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Binary and Compressed files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+*.db
+*.sqlite
+*.sqlitedb
+
+# Generated files
+*.js.map
+*.css.map
+*.html.map
+
+# Sublime Text files
+*.sublime-project
+*.sublime-workspace
+
+# Visual Studio Code files
+.vscode/

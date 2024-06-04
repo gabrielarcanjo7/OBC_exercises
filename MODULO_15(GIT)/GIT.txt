@@ -1,0 +1,24 @@
+1 git init: Inicializa um repositório Git em um diretório local.
+2 git clone [url]: Clona um repositório Git existente para o seu diretório local.
+3 git add [file]: Adiciona arquivos ao índice para prepará-los para commit.
+
+4 git commit -m "[mensagem]": Salva as mudanças no repositório com uma mensagem de commit.
+5 git status: Mostra o status dos arquivos no diretório de trabalho e no índice.
+6 git pull: Atualiza o repositório local com as mudanças do repositório remoto.
+
+7 git push: Envia os commits locais para o repositório remoto.
+8 git branch: Lista as branches locais.
+9 git checkout [branch]: Muda para a branch especificada.
+
+10 git merge [branch]: Combina os commits da branch especificada na branch atual.(pega)
+11 git log: Mostra o histórico de commits.
+12 git diff: compara alterações
+
+13 git commit --amend: faz alteracao no nome do commit
+14 git reset HEAD test.txt : tira da area do stagging
+15 git checkout -- test.txt : retrocede o commit
+
+16 git branch "branch name" : cria uma branch
+17 git checkout "branch name" : vai para a branch selecionada
+18 git branch -D "branch name" : deleta a branch selecionada
+19 git checkout -b "branch name": cria e vai pra branch
