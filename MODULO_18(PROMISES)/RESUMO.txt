@@ -1,0 +1,11 @@
+°Síncrono: executa em sequência, esperando o anterior finalizar.
+°Assíncrono: executa em sequência, sem esperar o anterior finalizar.
+
+°Promises: é um objeto que representa a eventual conclusão (ou falha) de uma operação assíncrona e seu valor resultante
+
+°Pendente (Pending): A promessa foi criada, mas ainda não foi concluída nem rejeitada.
+°Resolvida (Fulfilled): A promessa foi concluída com sucesso e o valor desejado está disponível.
+°Rejeitada (Rejected): A promessa não foi concluída com sucesso, e um motivo de falha (erro) está disponível.
+
+°then: O método .then() lida com o valor retornado por uma promessa resolvida, permitindo a execução de uma função após a promessa ser concluída com sucesso.
+°catch: O método .catch() lida com erros que ocorrem durante a execução de uma promessa, permitindo a execução de uma função quando a promessa é rejeitada.
