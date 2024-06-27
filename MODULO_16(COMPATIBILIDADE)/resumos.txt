@@ -1,48 +1,131 @@
-•ECMAScript é um conjunto de regras que dizem como uma linguagem de script deve funcionar.
-•caniuse - site para saber se algo funciona no navegador.
-°INTERPOLACAO DE STRINGS - É uma maneira de incorporar variáveis e expressões em uma string, usando ${}. Isso permite criar strings mais dinâmicas e legíveis.
-°OBJECT DESTRUTURING - Permite extrair valores de objetos e atribuí-los a variáveis usando uma sintaxe concisa. É útil quando você precisa acessar várias propriedades de um objeto rapidamente.
-°OPERATOR SPREAD - É usado para expandir um array em seus elementos individuais. É útil para passar argumentos para funções ou para criar cópias de arrays.
-°REST PARAMETERS - Permite representar um número indefinido de argumentos como um array dentro de uma função. É útil quando você não sabe quantos argumentos serão passados para a função.
-°NODE JS - É uma plataforma para construir aplicativos de servidor usando JavaScript.
-°JSON (JavaScript Object Notation) - É um formato de dados leve e fácil de ler usado para transmitir informações entre um servidor e um cliente na web.
-°NPM É um gerenciador de pacotes, ele baixa as ferramentas necessarias de um codigo especifico;
-	npm init -y     =   inicializa um projeto Node.JS
-	npm install (algo) -D       = Salva dependências como desenvolvimento.
-°TRASPILAR - É converter o código que está numa linguagem para outra; BABEL é utilizado para isso!
+ECMAScript: Conjunto de especificações para linguagens de script como JavaScript.
 
-	instalacao - npm install @babel/core @babel/cli @babel/preset-env --save-dev
+caniuse: Site para verificar compatibilidade de recursos web nos navegadores.
 
-	salvar em arquivo a transpilacão - npx babel testing-es8.js -o compiled-script.js
-	salvar em arquivo a transpilacão em ES5 - npx babel testing-es8.js -o compiled-script.js --presets=@babel/preset-env
-	salvar em arquivo a transpilacão de um dir inteiro - npx babel src --out-dir dist --presets=@babel/preset-env
-	Core.js - pacote para importar recursos que o ES5 não tem. - npm install core-js@3 --save
-	Para integrar com webpack - npm install --save-dev @babel/core @babel/preset-env babel-loader core-js@3 webpack webpack-cli
+Interpolação de Strings: Uso de ${} para incorporar variáveis e expressões em strings, tornando-as dinâmicas e legíveis.
+
+Object Destructuring: Sintaxe para extrair valores de objetos e atribuí-los a variáveis de forma concisa, útil para acessar múltiplas propriedades rapidamente.
+
+Spread Operator: Expande um array em seus elementos individuais, útil para passar argumentos para funções e criar cópias de arrays.
+
+Rest Parameters: Representa um número indefinido de argumentos como um array dentro de uma função.
+
+Node.js: Plataforma para construir aplicativos de servidor usando JavaScript.
+
+JSON (JavaScript Object Notation): Formato de dados leve e fácil de ler, usado para transmitir informações entre um servidor e um cliente na web.
+
+NPM (Node Package Manager): Gerenciador de pacotes para baixar e gerenciar dependências de projetos.
+
+npm init -y: Inicializa um projeto Node.js.
+
+npm install (algo) -D: Salva dependências como desenvolvimento.
+
+Transpilar: Converter código de uma linguagem para outra; Babel é utilizado para isso.
+
+Babel
+Instalação do Babel:
+
+npm install @babel/core @babel/cli @babel/preset-env --save-dev
+@babel/core: Lógica principal do Babel para transpilar código JavaScript.
+@babel/cli: Interface de linha de comando do Babel para transpilar arquivos.
+@babel/preset-env: Preset que configura automaticamente Babel para o ambiente alvo.
+
+Comandos do Babel:
+
+npx babel testing-es8.js -o compiled-script.js: Transpila um arquivo.
+npx babel testing-es8.js -o compiled-script.js --presets=@babel/preset-env: Transpila um arquivo em ES5.
+npx babel src --out-dir dist --presets=@babel/preset-env: Transpila um diretório inteiro.
+
+Core.js: Pacote para importar recursos que o ES5 não possui.
+npm install core-js@3 --save
+
+Integração com Webpack:
+npm install --save-dev @babel/core @babel/preset-env babel-loader core-js@3 webpack webpack-cli
+@babel/core: Lógica principal do Babel.
+@babel/preset-env: Preset que ajusta o Babel para o ambiente de destino.
+babel-loader: Integra Babel ao Webpack para transpilar arquivos durante o bundling.
+core-js@3: Adiciona polyfills para funcionalidades modernas do JavaScript.
+
+webpack: Empacotador de módulos.
+webpack-cli: Interface de linha de comando para Webpack.
+Configuração do Babel (babel.config.js)
 
 
-	@babel/core: Lógica principal do Babel para transpilar código JavaScript.
-	@babel/preset-env: Preset que automaticamente configura Babel para o ambiente alvo.
-	@babel/cli: Interface de linha de comando do Babel para transpilar arquivos.
-	babel-loader: Integra Babel ao Webpack para transformar o código durante o bundling.
-	core-js@3: Polyfills para adicionar suporte a funcionalidades modernas do JavaScript.
-
-No babel.config.js = 
 const presets = [
-    [
-        "@babel/preset-env", //preset
-        {
-            //config do projeto
-            useBuiltIns: "usage",
-            corejs: "3.3.2"
-        }
-    ]
-]
+  [
+    "@babel/preset-env",
+    {
+      useBuiltIns: "usage",
+      corejs: "3.3.2"
+    }
+  ]
+];
+module.exports = { presets };
 
-module.exports = { presets }
-// presets: presets
-=========================================================================
-°NPX - É um atalho para o node_modules/bin/...
-°NPM Scripts - É um atalho para comandos no terminal no package.js
-°WEBPACK - É um empacotador de módulos JavaScript que otimiza a eficiência dos aplicativos.
-	npx webpack --mode development  . Compila um projeto usando o webpack no modo de desenvolvimento
-	QUANDO USAMOS UM LOADER NO WEBPACK, COLOCAMOS no webpack.config.js o module: {}
+
+NPX e NPM Scripts
+NPX: Atalho para comandos dentro de node_modules/bin.
+NPM Scripts: Atalhos para comandos no terminal dentro do package.json.
+
+Webpack
+Webpack: Empacotador de módulos JavaScript para otimizar a eficiência dos aplicativos.
+
+Comandos do Webpack:
+
+npx webpack --mode development: Compila um projeto no modo de desenvolvimento.
+Configuração do Webpack (webpack.config.js):
+
+WEBPACK BOILERPLATE====
+
+const path = require("path");
+
+module.exports = {
+  entry: "./src/index.js", // Ponto de entrada do seu aplicativo
+  output: {
+    filename: "bundle.js", // Nome do arquivo de saída
+    path: path.resolve(__dirname, "dist"), // Diretório de saída
+  },
+  mode: 'development', // Modo de desenvolvimento para uma build não minificada
+  devServer: {
+    static: path.resolve(__dirname, 'dist'), // Diretório dos arquivos estáticos
+    port: 9000, // Porta do servidor de desenvolvimento
+    hot: true // Habilita o hot module replacement
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/, // Arquivos que serão processados pelo loader
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader', // Loader que será utilizado
+        },
+      },
+    ],
+  },
+};
+
+
+==================================================
+Explicação das Propriedades do Webpack
+
+entry: Define o ponto de entrada do seu aplicativo, onde o Webpack inicia a criação do grafo de dependências.
+
+output: Especifica o local e o nome do arquivo de saída gerado após a compilação.
+
+mode: Define o modo de compilação do Webpack (desenvolvimento ou produção).
+
+devServer: Configura o servidor de desenvolvimento do Webpack.
+
+static: Diretório onde os arquivos estáticos estão localizados.
+
+port: Porta na qual o servidor de desenvolvimento será executado.
+
+hot: Habilita o hot module replacement para atualizações em tempo real sem recarregar a página.
+
+module: Define como os diferentes tipos de módulos dentro do projeto serão tratados.
+
+rules: Conjunto de regras para o processamento de arquivos.
+
+test: Define quais arquivos serão afetados pela regra.
+
+use: Define qual loader será usado para processar os arquivos.

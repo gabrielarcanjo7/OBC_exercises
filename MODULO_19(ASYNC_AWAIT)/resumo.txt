@@ -1,0 +1,48 @@
+Conceito de async e await
+async: Declara uma função assíncrona que retorna implicitamente uma promessa. Uma função marcada com async permite o uso de await dentro dela.
+await: Pausa a execução da função assíncrona até que a promessa seja resolvida ou rejeitada. Pode ser usado apenas dentro de funções async.
+Uso Básico
+Declaração de função async:
+
+async function minhaFuncao() {
+  // código assíncrono aqui
+}
+Uso de await:
+
+async function exemplo() {
+  let resultado = await algumaPromessa();
+  console.log(resultado);
+}
+Manuseio de Erros
+Tratamento de erros com try/catch:
+
+async function exemplo() {
+  try {
+    let resultado = await algumaPromessa();
+    console.log(resultado);
+  } catch (erro) {
+    console.log('Erro:', erro);
+  }
+}
+Vantagens
+Leitura: Código assíncrono que parece síncrono, facilitando a leitura e a manutenção.
+Fluxo de controle: Melhor controle de fluxo ao trabalhar com operações assíncronas complexas.
+Promises Paralelas
+Execução paralela com Promise.all:
+
+async function exemplo() {
+  let [resultado1, resultado2] = await Promise.all([promessa1(), promessa2()]);
+  console.log(resultado1, resultado2);
+}
+Práticas Recomendadas
+Não usar await fora de async: await só pode ser usado dentro de funções marcadas com async.
+Evitar await em loops: Pode ser ineficiente. Use Promise.all para executar várias promessas em paralelo.
+Exemplos Adicionais
+Função assíncrona retornando uma promessa:
+
+async function retornaPromessa() {
+  return 42;
+}
+
+retornaPromessa().then(console.log); // Saída: 42
+Esses pontos cobrem as principais noções e boas práticas ao usar async e await em JavaScript, proporcionando uma base sólida para trabalhar com código assíncrono.
