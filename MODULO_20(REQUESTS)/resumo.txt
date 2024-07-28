@@ -1,0 +1,5 @@
+API: Uma Interface de Programação de Aplicativos que permite a comunicação entre diferentes softwares.
+REST: Um estilo arquitetônico para construir APIs que usa HTTP para operações como GET, POST, PUT e DELETE.
+RESTful: Refere-se a APIs que seguem os princípios do REST para comunicação eficiente e escalável
+
+const maxDiameter = neo["estimated_diameter"]["kilometers"]["estimated_diameter_max"]   jeito de pegar algo aninhado em um objeto.

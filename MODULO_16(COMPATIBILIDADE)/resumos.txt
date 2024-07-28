@@ -40,7 +40,7 @@ Core.js: Pacote para importar recursos que o ES5 não possui.
 npm install core-js@3 --save
 
 Integração com Webpack:
-npm install --save-dev @babel/core @babel/preset-env babel-loader core-js@3 webpack webpack-cli
+npm install --save-dev @babel/core @babel/preset-env babel-loader webpack webpack-cli
 @babel/core: Lógica principal do Babel.
 @babel/preset-env: Preset que ajusta o Babel para o ambiente de destino.
 babel-loader: Integra Babel ao Webpack para transpilar arquivos durante o bundling.
