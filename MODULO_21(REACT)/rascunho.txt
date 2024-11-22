@@ -1,0 +1,13 @@
+1ºReact: Biblioteca JavaScript para construir interfaces de usuário.
+
+2ºProps: Propriedades que são passadas para componentes para configurar valores.
+
+3ºLifecycle: Ciclo de vida dos componentes, incluindo montagem, atualização e desmontagem.
+
+4ºComponents: Blocos de construção reutilizáveis na interface.
+
+5ºHooks: Funções que permitem usar estado e outros recursos do React em componentes funcionais.
+
+6ºComponentes Controlados e Não-Controlados:
+  *Controlado: Estado do input gerenciado pelo React.
+  *Não Controlado: Estado do input gerenciado pelo DOM.

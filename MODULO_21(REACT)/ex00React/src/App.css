@@ -1,0 +1,23 @@
+body {
+  background-image: linear-gradient(to top, #89E3BF, #70b59a, #62a48a, #89E3BF);
+}
+
+button {
+  cursor: pointer;
+  color: rgb(94, 64, 24);
+  background-color: rgb(253, 170, 61);
+  border-radius: 3px;
+  padding: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button:hover {
+  background-color: rgb(182, 122, 43);
+  color: antiquewhite;
+}
+
+img {
+  border-radius: 5px;
+  position: relative;
+  left: 40%;
+}
