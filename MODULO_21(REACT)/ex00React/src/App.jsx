@@ -6,6 +6,9 @@ import cup from "./img/cup.jpg";
 import "./App.css";
 import RenderManyElem from "./components/RenderManyElemB";
 import Relogio from "./components/LifeCycle";
+import UnControlledForm from "./components/UncontrolledForm";
+import ControlledForm from "./components/ControlledForm";
+import MultipleInputsForm from "./components/HandlingMultipleInputs";
 
 const HelloWord = () => {
   return (
@@ -16,6 +19,10 @@ const HelloWord = () => {
         <ConditionalRendering />
         <RenderManyElem />
         <Relogio />
+        <UnControlledForm />
+        <ControlledForm />
+        <MultipleInputsForm />
+        
     </>
   );
 };
