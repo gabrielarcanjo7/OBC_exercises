@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ControlledForm = () => {
   const [name, setName] = useState("");
@@ -24,6 +25,8 @@ const ControlledForm = () => {
         </label>
         <button type="submit">Submit</button>
       </form>
+      <Link to='/'> Home </Link> 
+      <Link to='/multiple-inputs-form'> Next... </Link>
     </>
   );
 };

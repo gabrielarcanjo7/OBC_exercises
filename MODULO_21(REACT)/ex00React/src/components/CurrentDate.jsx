@@ -8,8 +8,8 @@ const CurrentDate = ({handleClick}) => {
   
   return <>
   {date}
-  <hr />
-  <button onClick={handleClick}>Click here!</button>
+
+  <button style={{ display: "block" }} onClick={handleClick}>Click here!</button>
   </>;
 };
 

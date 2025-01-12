@@ -1,0 +1,35 @@
+* {
+  transition: all 0.2s;
+}
+
+h1, h4 {
+    color: #20362d;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  background-color: rgb(28, 155, 155);
+  border-radius: 5px;
+}
+
+li {
+  flex-grow: 3;
+  margin-left: 0;
+}
+
+a {
+  color: white;
+  background-color: #7ed1b0;
+}
+
+a:hover {
+  color: #20362d;
+  background-color: #89e3bf;
+  border: none;
+  outline: none;
+  
+}

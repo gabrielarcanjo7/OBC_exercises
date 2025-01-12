@@ -6,6 +6,7 @@ Por exemplo, mostrar "Logado" ou "Deslogado" conforme o valor de um estado, como
 // eslint-disable-next-line no-unused-vars
 import { React, useState } from "react";
 import RenderIfTrue from "./DontRender";
+import { Link } from "react-router-dom";
 
 const ConditionalRendering = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -21,6 +22,9 @@ const ConditionalRendering = () => {
         {isLoggedIn ? "Logout" : "Login"}
       </button>
     < RenderIfTrue />
+<div style={{marginTop: "10px"}}>
+    <Link to='/'> Home </Link> 
+    <Link to='/render-many-elem'> Next... </Link></div>
     </>
   );
 };

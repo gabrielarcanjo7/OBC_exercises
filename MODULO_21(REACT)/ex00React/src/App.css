@@ -1,5 +1,19 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-  background-image: linear-gradient(to top, #89E3BF, #70b59a, #62a48a, #89E3BF);
+  background: linear-gradient(to top, #89E3BF, #8ce8c3);
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
@@ -16,8 +30,67 @@ button:hover {
   color: antiquewhite;
 }
 
+a {
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: none;
+  padding: 4px;
+  background-color: rgb(30, 74, 113);
+  color: aliceblue;
+}
+
+a:hover {
+  color: rgb(30, 74, 113);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid;
+}
+
 img {
   border-radius: 5px;
   position: relative;
   left: 40%;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  list-style: none;
+}
+
+li {
+  margin: 10px; 
+}
+
+a {
+  margin: 2px 4px 0 0; 
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+div#img-local {
+  display: flex;
+  align-items: center;
+  width: 20em;
+}
+
+div#img-hora {
+  display: flex;
+  width: 100%;  /* Ajusta a largura da div */
+  flex: 0.4;
+}
+
+div#img-hora img {
+  width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+  margin: 0; /* Remove a margem extra */
+}
+
+div#img-local div {
+  display: flex;
+  flex-direction: column;
+  flex: 0.4;
 }

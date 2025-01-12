@@ -1,5 +1,7 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import cup from "../img/cup.jpg";
+import { Link } from "react-router-dom";
 
 function Relogio() {
   const [hora, setHora] = useState(new Date().toLocaleTimeString());
@@ -10,15 +12,27 @@ function Relogio() {
     }, 1000);
 
     // Limpar intervalo quando o componente for desmontado
-    return () => {clearInterval(intervalo)
-      console.log('oi')
+    return () => {
+      clearInterval(intervalo);
+      console.log("oi");
     };
   }, []);
 
   return (
-    <div>
-      <p>A hora atual é: {hora}</p>
-    </div>
+    <>
+      <div id="img-local">
+        <div id="hora">
+          <p>A hora atual é: {hora}</p>
+
+          <Link to="/"> Home </Link>
+          <Link to="/uncontrolled-form"> Next... </Link>
+        </div>
+
+        <div id="img-hora">
+          <img src={cup} alt="cup" />
+        </div>
+      </div>
+    </>
   );
 }
 
